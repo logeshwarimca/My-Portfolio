@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', 'Roboto', sans-serif;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: #000;
+  padding: 40px 16px 25px; /* ⬅ reduced height */
+  color: #fff;
+  text-align: center;
+}
+
+.footer-inner {
+  max-width: 900px;
+  margin: auto;
+  animation: fadeUp 1s ease forwards;
+}
+
+/* Fade animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* ⬅ smaller movement */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer-name {
+  font-size: 1.6rem; /* ⬅ slightly smaller */
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.footer-role {
+  margin-top: 4px; /* ⬅ reduced */
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Divider line */
+.footer-line {
+  width: 60px; /* ⬅ smaller by default */
+  height: 2px;
+  background: #00f2fe;
+  margin: 18px auto; /* ⬅ reduced spacing */
+}
+
+/* Social icons */
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 22px; /* ⬅ reduced gap */
+  margin: 18px 0;
+}
+
+.footer-icons a {
+  color: #aaa;
+  font-size: 1.25rem; /* ⬅ slightly smaller */
+  transition: all 0.3s ease;
+}
+
+.footer-icons a:hover {
+  color: #00f2fe;
+  transform: translateY(-3px); /* ⬅ subtle hover */
+}
+
+/* Copyright */
+.footer-copy {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 14px;
+}
+body {
+  overscroll-behavior: none;
+}

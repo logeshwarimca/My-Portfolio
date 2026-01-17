@@ -1,0 +1,190 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', 'Roboto', sans-serif;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 90px 0 180px; /* TOP & BOTTOM SPACE */
+  background: #000;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+/* ================= HEADING ================= */
+.container > h1 {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: #fff;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  margin-bottom: 80px;
+  letter-spacing: 2px;
+}
+
+/* ================= HERO CIRCLE ================= */
+.hero-circle {
+  position: relative;
+  width: min(80vw, 380px);
+  height: min(80vw, 380px);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  isolation: isolate; /* prevents glow overlap */
+}
+
+/* ================= OUTER GLOW ================= */
+.hero-circle::before {
+  content: "";
+  position: absolute;
+  inset: -30px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 242, 254, 0.18),
+    transparent 70%
+  );
+  filter: blur(45px);
+  animation: orbitGlow 6s ease-in-out infinite;
+  z-index: -1;
+}
+
+/* ================= CENTER ================= */
+.inner-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 242, 254, 0.5);
+  backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  box-shadow: 0 0 40px rgba(0, 242, 254, 0.4);
+}
+
+.center-text {
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+  text-shadow: 0 0 15px rgba(0, 242, 254, 0.8);
+}
+
+/* ================= ORBIT ================= */
+.hero-static-layout {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* ================= ICON CONTAINER ================= */
+.planet-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+/* ================= ICON ================= */
+.icon-wrapper {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.9);
+  border: 2px solid #00f2fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00f2fe;
+  font-size: 1.8rem;
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.5);
+  animation: iconGlow 3.5s ease-in-out infinite;
+  cursor: pointer;
+}
+
+.skill-icon-svg {
+  filter: drop-shadow(0 0 6px #00f2fe);
+}
+
+/* ================= LABEL ================= */
+.skill-name {
+  position: absolute;
+  bottom: -30px;
+  width: max-content;
+  font-size: 0.7rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  text-shadow: 0 0 10px #00f2fe;
+}
+
+/* ================= HOVER ================= */
+.planet-container:hover .icon-wrapper {
+  transform: scale(1.2);
+  background: rgba(0, 242, 254, 0.15);
+  box-shadow: 0 0 40px rgba(0, 242, 254, 0.9);
+  z-index: 20;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes orbitGlow {
+  0% { opacity: 0.3; transform: scale(0.95); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+  100% { opacity: 0.3; transform: scale(0.95); }
+}
+
+@keyframes iconGlow {
+  0% { box-shadow: 0 0 10px rgba(0, 242, 254, 0.3); }
+  50% { box-shadow: 0 0 30px rgba(0, 242, 254, 0.8); }
+  100% { box-shadow: 0 0 10px rgba(0, 242, 254, 0.3); }
+}
+
+/* ================= SMALL SCREENS ================= */
+@media (max-width: 520px) {
+  .container {
+    padding: 110px 0 220px;
+  }
+
+  .hero-circle {
+    width: 300px;
+    height: 300px;
+  }
+
+  .planet-container {
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+    margin-left: -25px;
+  }
+
+  .icon-wrapper {
+    font-size: 1.5rem;
+  }
+
+  .skill-name {
+    font-size: 0.65rem;
+  }
+}
+
+/* ================= SHORT HEIGHT FIX ================= */
+@media (max-height: 540px) {
+  .container {
+    padding-top: 120px;
+    padding-bottom: 260px;
+  }
+
+  .container > h1 {
+    margin-bottom: 90px;
+  }
+}

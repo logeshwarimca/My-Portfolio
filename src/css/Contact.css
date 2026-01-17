@@ -1,0 +1,241 @@
+/* ================= RESET ================= */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ================= WRAPPER ================= */
+.contact-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ================= VIDEO ================= */
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Optional overlay */
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+/* Circuit-like background effect */
+.circuit-lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle at 50% 50%, rgba(0, 242, 254, 0.1) 0%, transparent 10%);
+  z-index: 0;
+}
+
+/* ================= CONTAINER ================= */
+.contact-container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ================= HEADER ================= */
+.contact-header {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 40px;
+  text-shadow: 0 0 20px rgba(0, 242, 254, 0.8);
+  font-weight: 800;
+}
+
+.arrow-icon {
+  color: #ffd700;
+}
+
+/* ================= GLASS CARD ================= */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: #00f2fe;
+  box-shadow: 0 0 50px rgba(0, 242, 254, 0.5);
+}
+
+/* ================= INPUT FIELDS ================= */
+.input-field {
+  position: relative;
+  margin-bottom: 25px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+}
+
+.input-field input::placeholder,
+.input-field textarea::placeholder {
+  color: #ffd700;
+}
+
+.input-field input,
+.input-field textarea {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: yellow;
+  caret-color: #fff;
+  width: 100%;
+  font-size: 1rem;
+  padding: 5px 10px;
+}
+
+.field-icon {
+  color: #ffd700;
+  font-size: 1.1rem;
+  filter: drop-shadow(0 0 5px #00f2fe);
+}
+
+/* Underline animation */
+.underline {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 0;
+  height: 2px;
+  background: #ffd700;
+  box-shadow: 0 0 10px #ffd700;
+  transition: 0.5s;
+}
+
+.input-field:focus-within .underline {
+  width: 80%;
+}
+
+.input-field:focus-within {
+  border-color: rgba(0, 242, 254, 0.5);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.1);
+}
+
+/* ================= SUBMIT BUTTON ================= */
+.send-btn {
+  margin-top: 20px;
+  background: #00f2fe;
+  color: #fff;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.6);
+  transition: all 0.3s ease;
+}
+
+.send-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 0 35px rgba(0, 242, 254, 1);
+}
+
+.send-icon {
+  font-size: 1.2rem;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Medium screens (tablets, small desktops) */
+@media (max-width: 768px) {
+  .contact-container {
+    width: 70%;
+  }
+
+  .glass-card {
+    padding: 30px;
+  }
+
+  .contact-header {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+
+  .input-field input,
+  .input-field textarea {
+    font-size: 0.95rem;
+  }
+
+  .send-btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 480px) {
+  .contact-container {
+    width: 90%;
+  }
+
+  .glass-card {
+    padding: 20px;
+  }
+
+  .contact-header {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  .input-field input,
+  .input-field textarea {
+    font-size: 0.9rem;
+  }
+
+  .send-btn {
+    padding: 10px 25px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
+  .contact-header {
+    font-size: 1.8rem;
+  }
+
+  .input-field input,
+  .input-field textarea {
+    font-size: 0.85rem;
+  }
+
+  .send-btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+}
