@@ -26,7 +26,7 @@ const Home = () => {
                 <h2><span>This is </span> Logeshwari Sathya</h2>
                <h3>
         I'm a{" "}
-        <span className="typing">
+        <div className="typing">
           <ReactTyped
             strings={[
                 "Python Full-Stack Developer",
@@ -42,7 +42,7 @@ const Home = () => {
             backDelay={1000}
             loop
           />
-        </span>
+        </div>
       </h3>
                 <button>About Me</button>
                 <div className="icons">

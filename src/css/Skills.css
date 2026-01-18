@@ -151,6 +151,34 @@
 }
 
 /* ================= SMALL SCREENS ================= */
+@media (max-width: 400px) {
+  .container {
+    padding: 80px 14px 140px; /* tighter & balanced */
+  }
+
+  .hero-circle {
+  position: relative;
+  margin: 0 auto;
+}
+
+
+  .planet-container {
+    width: 44px;
+    height: 44px;
+    margin-top: 4px;
+    margin-left: -22px; /* avoid overflow */
+  }
+
+  .icon-wrapper {
+    font-size: 1.4rem;
+  }
+
+  .skill-name {
+    font-size: 0.6rem;
+    white-space: nowrap; /* prevent text break */
+  }
+}
+
 @media (max-width: 520px) {
   .container {
     padding: 110px 0 220px;

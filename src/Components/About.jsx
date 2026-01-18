@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import "../css/about.css";
 import aboutimg from '../imgs/about.png'
+import resume from '../imgs/Logeshwari.pdf'
 
 const container = {
   hidden: { opacity: 0 },
@@ -96,7 +97,7 @@ const About = () => {
 
           {/* DOWNLOAD CV BUTTON */}
           <motion.a
-            href="/Logeshwari_Sathya_CV.pdf"
+            href={resume}
             download
             className="about-btn"
             whileHover={{ scale: 1.08 }}
