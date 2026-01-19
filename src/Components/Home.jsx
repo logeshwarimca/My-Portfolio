@@ -44,7 +44,7 @@ const Home = () => {
           />
         </div>
       </h3>
-                <button href="#about">About Me</button>
+                <a href="#about">About Me</a>
                 <div className="icons">
                     <a href="https://www.facebook.com/share/1C9Y1F8HhZ/"><FaFacebookF /></a>
                     <a href="https://github.com/logeshwarisathya/"><FaGithubAlt /></a>
