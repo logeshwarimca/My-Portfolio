@@ -64,7 +64,7 @@
 .h-content>h3>div{
     color: rgb(255, 183, 0);
 }
-.h-content > a {
+.h-content > button {
   text-decoration: none;  
     height: 7%;
     width: 20%;
@@ -79,13 +79,13 @@
 }
 
 /* Hover */
-.h-content > a:hover {
+.h-content > button:hover {
   transform: translateY(-4px) scale(1.05);
   box-shadow: 0 0 30px rgba(255, 183, 0, 0.8);
 }
 
 /* Click */
-.h-content > a:active {
+.h-content > button:active {
   transform: scale(0.95);
 }
 
