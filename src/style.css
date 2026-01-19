@@ -15,7 +15,7 @@
     width: 100%;
     
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 /* Video */
 .bg-video {
@@ -65,7 +65,6 @@
     color: rgb(255, 183, 0);
 }
 .h-content > button {
-  text-decoration: none;  
     height: 7%;
     width: 20%;
     border-radius: 50px;
