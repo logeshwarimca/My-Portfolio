@@ -152,7 +152,7 @@
 
 /* ================= SMALL SCREENS ================= */
 
-@media (max-width: 389px) {
+@media (max-width: 380px) {
   /* ================= HERO CIRCLE ================= */
 .hero-circle {
   position: relative;
@@ -250,7 +250,7 @@
     white-space: nowrap;
   }
 }
-/* 
+
 @media (max-width: 300px) {
   .hero-circle {
     margin-top: 0;
@@ -274,7 +274,7 @@
     font-size: 0.6rem;
     white-space: nowrap;
   }
-} */
+} 
 @media (max-width: 490px) {
   /* ================= HERO CIRCLE ================= */
 .hero-circle {
