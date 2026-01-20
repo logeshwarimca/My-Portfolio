@@ -15,7 +15,7 @@
     width: 100%;
     
     position: relative;
-    overflow: visible;
+    overflow: hidden;
 }
 /* Video */
 .bg-video {
@@ -64,11 +64,7 @@
 .h-content>h3>div{
     color: rgb(255, 183, 0);
 }
-.h-content > a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
+.h-content > button {
     height: 7%;
     width: 20%;
     border-radius: 50px;
@@ -82,13 +78,13 @@
 }
 
 /* Hover */
-.h-content > a:hover {
+.h-content > button:hover {
   transform: translateY(-4px) scale(1.05);
   box-shadow: 0 0 30px rgba(255, 183, 0, 0.8);
 }
 
 /* Click */
-.h-content > a:active {
+.h-content > button:active {
   transform: scale(0.95);
 }
 
