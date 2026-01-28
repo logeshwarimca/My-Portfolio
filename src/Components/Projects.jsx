@@ -21,7 +21,7 @@ const projectData = [
     image: weather,
     tech: ["React", "HTML", "CSS", "Js"],
     description: "A React-based weather application displaying real-time temperature, humidity, and weather conditions.",
-    github: "#",
+    github: "https://github.com/logeshwarisathya/WEATHER",
     live: "https://logeshwarisathya.github.io/WEATHER/"
   },
   {
