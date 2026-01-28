@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaBars } from "react-icons/fa";
-import '../css/nav.css'
 
 const links = [
   "Home",
